@@ -1,0 +1,288 @@
+/*Reset CSS*/
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Arial', sans-serif;
+    color: #494949;
+}
+body {
+    overflow-x: hidden; 
+    max-width: 100%; 
+}
+section{
+    margin-top: 2%;
+    padding: 0 2%;
+}
+
+.logo{
+    object-fit: cover;
+    border-radius: 100%;
+    width: 5%;
+    height: 10%;
+    align-self: center;
+}
+
+.btn{
+    background: #333;
+    color: white;
+    font-weight: 500;
+    margin: 2rem;
+    padding: 2%;
+}
+.btn:hover{
+    color: rgb(0, 174, 255);
+}
+
+h1{
+    font-weight: 600;
+}
+h2{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    font-size: 2em;
+}
+header {
+    text-align: center;
+}
+header img {
+    width: 95%;
+    height: auto;
+    object-fit: contain;
+    object-position: top;
+}
+
+/*Style Menu*/
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+     
+}
+aside{
+    margin: 20px
+}
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 10px;
+    display: flex;
+    border-bottom: 2px solid transparent;
+    padding: 10px 0px;
+    justify-content: space-around;
+}
+
+
+nav a:hover{
+    color: rgb(0, 174, 255);
+    border-bottom: 2px solid rgb(0, 174, 255);
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 3rem;
+}
+
+nav li{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+nav ul::after{
+    content:"";
+    display: table;
+    clear: both;
+}
+/*style image*/
+.portrait {
+    width:30%;
+    border-radius: 25%;
+    height: 100px;
+    object-fit: cover;
+}
+.portrait2 {
+    width:30%;
+    border-radius: 25%;
+    height: 100px;
+    object-fit: cover;
+    object-position: 30% 28%
+}
+.philosopher:nth-child(2) img.portrait {
+    object-fit: cover;
+    object-position: 50% 40%;
+}
+/*Styles particuliers*/
+#philosophers {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    gap:10px;
+    margin:20px 0;
+}
+#Wphilo {
+ 
+    display: flex;
+   flex-direction: row;
+}
+.philosopher {
+    width: 30%;
+    margin: 10px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;  
+}
+
+.text-content{
+    margin-bottom: 20px;
+}
+audio{
+    display: block;
+    margin: auto;
+    background-color: #333;
+    color: #eee;
+}
+#video {
+    text-align: center;
+}
+
+#video iframe {
+    display: none;
+}
+
+
+/* Ajout de styles pour le fil d'Ariane */
+.breadcrumb {
+    list-style: none;
+    padding: 10px;
+    background-color: #eee;
+    margin-bottom: 20px;
+}
+
+.breadcrumb li {
+    display: inline;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #333;
+    margin-right: 10px;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+/*style texte*/
+
+
+.text2{
+    animation-name: text2;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+}
+
+@keyframes text2 {
+    from {margin-top: 20%;}
+    to {margin-bottom: 10%;}
+
+}
+
+
+/*Style article*/
+.reverse{
+    flex-direction: row-reverse;
+}
+article {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:10px;
+    margin: 20px;
+}
+
+article img{
+    width: 35%;
+    height: auto;
+    border-radius: 25% 60%;
+}
+article h3{
+color: #333;
+}
+
+article div {
+    width:58%;
+    padding: 5px;
+}
+footer{
+    padding: 2rem;
+   text-align: center;
+   background-color: #aea8a8;
+}
+/* Styles pour les écrans de petite taille */
+@media only screen and (max-width: 600px) {
+    h2 {
+        font-size: 1.5em;
+    }
+
+    header img {
+        width: 100%;
+    }
+
+    .portrait {
+        width: 100%;
+        border-radius: 0; 
+    }
+
+    .philosopher {
+        width: 100%;
+    }
+
+    article img,
+    article div {
+        width: 100%;
+    }
+    article {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap:10px;
+        margin: 20px;
+    }
+    .reverse{
+        flex-direction: column;
+    }
+    .logo{
+        width: 20%;
+    }
+}
+
+
+/* Styles pour les écrans de taille moyenne */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .logo{
+        width: 20%;
+    }
+    header img {
+        width: 80%;
+    }
+
+    .philosopher {
+        width: 100%;
+    }
+
+     article img {
+        width: 48%;
+    }
+    article div {
+        width: 100%;
+    }
+}
